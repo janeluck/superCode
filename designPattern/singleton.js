@@ -15,7 +15,7 @@ const getSingle = function (fn) {
 }
 
 
-// 唯一浮层
+// eg: 唯一浮层
 
 var createLoginLayer = function(){
     var div = document.createElement( 'div' );
@@ -31,3 +31,20 @@ document.getElementById( 'loginBtn' ).onclick = function(){
     var loginLayer = createSingleLoginLayer();
     loginLayer.style.display = 'block';
 };
+
+// eg: 一次绑定， 可以使用return true的方式
+var bindEvent = getSingle(function(){
+    document.getElementById( 'div1' ).onclick = function(){
+        alert ( 'click' );
+    }
+    return true;
+});
+
+var render = function(){
+    console.log( '开始渲染列表' );
+    bindEvent();
+};
+
+render();
+render();
+render();
