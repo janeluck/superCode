@@ -1,3 +1,4 @@
+// 单例模式
 // Singleton.getInstance
 
 // 透明的单例
