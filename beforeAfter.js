@@ -13,3 +13,19 @@ Function.prototype.after = function (afterFn) {
         return ret;
     }
 };
+
+// 不更改原型的形式
+function before(beforeFn, fn) {
+    return function () {
+        beforeFn.apply(this, arguments)
+        return fn.apply(this, arguments)
+    }
+}
+
+function after(afterFn, fn) {
+    return function () {
+        var rest = fn.apply(this, arguments)
+        afterFn.apply(this, arguments)
+        return rest
+    }
+}
