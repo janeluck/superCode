@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>awesome</title>
+    <style>
+        /*buttonSpacing*/
+        .buttonSpacing button + button {
+            margin-left: 20px;
+        }
+        /*buttonSpacing*/
+
+
+        /*wordBreak*/
+        .wordBreak p {
+            width: 300px;
+            padding: 5px;
+            background-color: #f0f3f9;
+            font-size: 14px;
+        }
+        .wordBreak .word-break {
+            word-break: break-all;
+        }
+        .wordBreak .word-wrap {
+            word-wrap: break-word;
+        }
+        /*wordBreak*/
+
+
+    </style>
+</head>
+<body>
+
+<!---->
+<div class="buttonSpacing">
+    <button>ok</button><button>cancel</button>
+</div>
+
+
+
+<div class="wordBreak">
+    <strong>word-break:break-all</strong>
+    <p class="word-break">如果您在阅读过程中有任何疑问或者发现表述不严谨的地方，欢迎去官方论坛http://bbs.cssworld.cn进行反馈与交流。</p>
+    <strong>word-wrap: break-word;</strong>
+    <p class="word-wrap">如果您在阅读过程中有任何疑问或者发现表述不严谨的地方，欢迎去官方论坛http://bbs.cssworld.cn进行反馈与交流。</p>
+</div>
+
+
+<div>
+    <button>1</button>
+    <button>2</button>
+</div>
+</body>
+</html>
